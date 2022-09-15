@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: page
 title: 'Unicolor'
 permalink: /unicolor/
 ---
 
-## A Unified Framework for Multi-Modal Colorization with Transformer
+# A Unified Framework for Multi-Modal Colorization with Transformer
 
 Zhitong Huang $$^{1 \dagger}$$,  Nanxuan Zhao $$^{2 \dagger}$$ ,  Jing Liao $$^{1*}$$
 
@@ -15,6 +15,8 @@ $$^1$$ : City University of Hong Kong, Hong Kong SAR, China &emsp; $$^2$$ : Univ
 <sub>
 $$^\dagger$$ : Both authors contributed equally to this research &emsp;&emsp; $$^*$$ : Corresponding author
 </sub>
+
+**Code**: coming soon...
 
 ![alt text](./figures/teaser.png)
 
