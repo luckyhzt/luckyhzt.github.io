@@ -1,6 +1,6 @@
 # UniColor: A Unified Framework for Multi-Modal Colorization with Transformer
 
-Zhitong Huang $$^1$$ $^\dagger$,  Nanxuan Zhao $^2$ $^\dagger$ ,  Jing Liao $^1$ $^*$
+Zhitong Huang $^1$ $^\dagger$,  Nanxuan Zhao $^2$ $^\dagger$ ,  Jing Liao $^1$ $^*$
 
 $^1$ : City University of Hong Kong, Hong Kong SAR, China &emsp; $^2$ : University of Bath, Bath, United Kingdom
 
