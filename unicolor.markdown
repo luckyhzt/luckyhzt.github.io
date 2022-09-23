@@ -23,7 +23,7 @@ $$^\dagger$$ : Both authors contributed equally to this research &emsp;&emsp; $$
     width="720"
     height="405"
     src="https://www.youtube.com/embed/s4KVWqqGYBc"
-    frameborder="0"
+    frameborder="20"
     allow="autoplay; encrypted-media"
     allowfullscreen
 >
