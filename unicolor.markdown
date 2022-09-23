@@ -16,7 +16,7 @@ $$^1$$ : City University of Hong Kong, Hong Kong SAR, China &emsp; $$^2$$ : Univ
 $$^\dagger$$ : Both authors contributed equally to this research &emsp;&emsp; $$^*$$ : Corresponding author
 </sub>
 
-**Code**: coming soon...
+**Paper**: https://arxiv.org/abs/2209.11223  **Code**: coming soon...
 
 ### Video
 <iframe
