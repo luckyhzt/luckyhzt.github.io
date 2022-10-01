@@ -78,8 +78,26 @@
 
 <h3>Abstract</h3>
 <p><img src="/figures/teaser.png" alt="alt text" /></p>
-
 <p>We propose the first unified framework <em>UniColor</em> to support colorization in multiple modalities, including both unconditional and conditional ones, such as stroke, exemplar, text, and even a mix of them. Rather than learning a separate model for each type of condition, we introduce a two-stage colorization framework for incorporating various conditions into a single model. In the first stage, multi-modal conditions are converted into a common representation of hint points. Particularly, we propose a novel CLIP-based method to convert the text to hint points. In the second stage, we propose a Transformer-based network composed of <em>Chroma-VQGAN</em> and <em>Hybrid-Transformer</em> to generate diverse and high-quality colorization results conditioned on hint points. Both qualitative and quantitative comparisons demonstrate that our method outperforms state-of-the-art methods in every control modality and further enables multi-modal colorization that was not feasible before. Moreover, we design an interactive interface showing the effectiveness of our unified framework in practical usage, including automatic colorization, hybrid-control colorization, local recolorization, and iterative color editing.</p>
+
+<h3>Two-Stage Method</h3>
+<p><img src="/figures/unified.png" alt="alt text" /></p>
+<p>Our framework consists of two stages. In the first stage, all different conditions (stroke, exemplar, and text) are converted to a common form of hint points. In the second stage, diverse results are generated automatically either from scratch or based on the condition of hint points.</p>
+
+<h3>Network Architecture</h3>
+<p><img src="/figures/overall_structure.png" alt="alt text" /></p>
+<p>Architecture of diverse unified colorization network. The network consists of two sub-nets: (a) a Chroma-VQGAN to disentangle and quantize chroma representation from the continuous gray one, and (b) a Hybrid-Transformer to generate diverse colorization results from unified conditions and continuous gray features.</p>
+
+<h3>Application</h3>
+<strong> - Hybrid Control</strong>
+<p><img src="/figures/hybrid_control.png" alt="alt text" /></p>
+<p>Colorization on legacy old photos with hybrid controls. In each row, we first show the input grayscale photo, followed by four design cases under different hybrid conditions. We indicate stroke-based conditions with blue boundaries, exemplar-based conditions with green boundaries, and text-based conditions with orange boundaries.</p>
+<strong> - Recolorization</strong>
+<p><img src="/figures/recolorize.png" alt="alt text" /></p>
+<p>Our framework also supports recolorization. For each design case, in the middle column, we show the selected region in the upper row, and the input condition in the lower row.</p>
+<strong> - Iterative Editing</strong>
+<p><img src="/figures/iter_edit.png" alt="alt text" /></p>
+<p>Iterative editing on legacy old photos. Users can adjust the color based on various conditions iteratively.</p>
 
 <!--Content ends here-->
 
