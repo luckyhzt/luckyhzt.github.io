@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Study on Unconditional Colorization</title>
+  </head>
+  <body>
+    <h3>User Study on Unconditional Colorization. Trained on ImageNet if not specified (* trained on COCO).</h3>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <p><strong>Grayscale image</strong></p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <p><strong>InstColor* [Su et al. 2020]</strong></p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <p><strong>ChromaGAN [Vitoria et al. 2020]</strong></p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <p><strong>Coltran [Kumar et al. 2021]</strong></p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <p><strong>Ours (Unconditional)</strong></p>
+          </p>
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/28.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 73 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/28.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.21</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/28.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.12</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/28.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.14</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/28.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.53</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/22.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 81 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/22.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.099</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/22.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.074</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/22.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.35</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/22.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.48</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/18.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 86 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/18.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.093</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/18.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.13</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/18.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.24</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/18.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.53</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/11.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 87 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/11.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.17</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/11.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.25</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/11.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.092</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/11.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.48</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/10.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 79 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/10.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.19</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/10.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.076</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/10.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.076</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/10.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.66</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/9.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 101 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/9.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.22</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/9.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.12</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/9.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.25</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/9.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.42</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/7.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 81 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/7.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.19</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/7.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.28</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/7.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.11</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/7.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.42</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/4.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 88 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/4.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.011</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/4.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.034</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/4.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.0</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/4.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.95</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/2.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 69 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/2.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.38</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/2.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.029</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/2.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.17</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/2.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.42</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/26.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 87 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/26.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.23</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/26.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.21</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/26.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.13</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/26.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.44</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/29.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 76 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/29.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.29</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/29.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.26</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/29.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.14</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/29.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.3</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/17.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 69 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/17.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.1</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/17.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.29</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/17.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.3</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/17.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.3</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/27.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 84 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/27.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.06</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/27.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.083</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/27.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.65</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/27.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.2</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/20.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 83 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/20.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.49</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/20.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.16</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/20.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.27</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/20.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.084</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/12.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 84 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/12.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.2</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/12.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.17</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/12.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.12</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/12.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.51</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/0.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 70 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/0.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.071</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/0.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.029</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/0.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.043</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/0.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.86</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/1.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 78 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/1.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.051</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/1.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.32</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/1.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.29</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/1.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.33</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/15.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 70 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/15.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.2</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/15.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.3</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/15.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.33</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/15.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.17</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/25.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 79 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/25.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.18</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/25.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.19</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/25.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.19</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/25.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.44</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/19.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 88 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/19.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.28</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/19.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.18</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/19.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.23</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/19.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.31</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/8.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 68 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/8.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.51</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/8.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.15</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/8.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.19</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/8.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.15</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/3.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 86 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/3.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.12</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/3.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.19</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/3.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.07</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/3.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.63</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/6.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 81 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/6.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.47</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/6.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.14</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/6.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.27</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/6.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.12</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/21.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 81 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/21.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.062</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/21.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.47</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/21.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.17</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/21.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.3</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/16.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 78 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/16.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.21</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/16.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.14</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/16.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.27</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/16.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.38</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/24.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 101 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/24.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.12</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/24.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.32</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/24.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.13</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/24.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.44</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/23.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 68 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/23.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.34</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/23.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.074</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/23.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.18</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/23.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.41</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/13.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 73 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/13.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.096</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/13.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.38</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/13.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.16</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/13.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.36</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/5.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 83 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/5.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.22</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/5.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.24</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/5.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.31</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/5.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.23</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table border="1" style="table-layout: fixed;">
+      <tr>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\0/14.jpg" style="width:400px">
+            </a><br>
+            <p>Grayscale - Answered 76 times</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\1/14.jpg" style="width:400px">
+            </a><br>
+            <p>InstColor - Preferred rate: 0.26</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\2/14.jpg" style="width:400px">
+            </a><br>
+            <p>ChromaGAN - Preferred rate: 0.12</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\3/14.jpg" style="width:400px">
+            </a><br>
+            <p>Coltran - Preferred rate: 0.26</p>
+          </p>
+        </td>
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <a href="images\">
+              <img src="images\4/14.jpg" style="width:400px">
+            </a><br>
+            <p>Ours (Uncond.) - Preferred rate: 0.36</p>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

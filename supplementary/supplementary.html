@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    
+body, html
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #38444d;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+  font-size: 34px;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(147, 171, 150, 0.987);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #a1a0a0;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+
+<ul>
+    <li><a href="files/home/home.html" target="displayframe">Home</a></li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">More Comparisons</a>
+      <div class="dropdown-content">
+        <a href="files/more_comps/uncond/index.html" target="displayframe">Unconditional</a>
+        <a href="files/more_comps/stroke/index.html" target="displayframe">Stroke-based</a>
+        <a href="files/more_comps/exemplar/index.html" target="displayframe">Exemplar-based</a>
+        <a href="files/more_comps/text/index.html" target="displayframe">Text-based</a>
+      </div>
+    </li>
+    
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Legacy Old Photos</a>
+      <div class="dropdown-content">
+          <a href="files/legacy_photos/uncond/index.html" target="displayframe">Unconditional</a>
+          <a href="files/legacy_photos/single_cond/index.html" target="displayframe">Single Control</a>
+          <a href="files/legacy_photos/hybrid/index.html" target="displayframe">Hybrid Controls</a>
+      </div>
+    </li>
+
+    <li><a href="files/recolorize/index.html" target="displayframe">Recolorization</a></li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">User Study</a>
+      <div class="dropdown-content">
+          <a href="files/user_study/uncond/index.html" target="displayframe">Unconditional</a>
+          <a href="files/user_study/stroke/index.html" target="displayframe">Stroke-based</a>
+          <a href="files/user_study/exemplar/index.html" target="displayframe">Exemplar-based</a>
+      </div>
+    </li>
+
+    <li><a href="files/ablation/ablation.html", target="displayframe">Ablation Study</a></li>
+</ul>
+
+
+<iframe src="files/home/home.html" name="displayframe" frameborder="0" scrolling="yes" style="position: absolute; height: 90%; border: none; width: 100%;"></iframe>
+
+
+
+</body>
+</html>
+
+
