@@ -62,6 +62,9 @@
 \(^*\) : Corresponding author
 </center></sub></p>
 
+<h4><center> 
+  <a href="javascript:to_supplementary();"><strong>Supplementary</strong></a> </center></h4>
+
 <div>
 <a style="cursor:pointer;" data-fancybox data-src="/lvcd/videos/teaser_1.webm"> <video width="837" height="160" autoplay muted loop controls> <source src="/lvcd/videos/teaser_1.webm" type="video/webm"> </video> </a>
 <a style="cursor:pointer;" data-fancybox data-src="/lvcd/videos/teaser_2.webm"> <video width="837" height="160" autoplay muted loop controls> <source src="/lvcd/videos/teaser_2.webm" type="video/webm"> </video> </a>
@@ -106,6 +109,44 @@
 
 <!-- Javascript Functions -->
 
+</script>
+
+<script type = "text/javascript">
+  function to_supplementary() {
+    origin = window.location.origin;
+    window.location.href = origin + '/lvcd/supplementary/supplementary.html';
+  }
+
+  let slideIndex = [1, 1, 1];
+  showSlides(0, slideIndex[0]);
+  showSlides(1, slideIndex[1])
+  showSlides(2, slideIndex[2])
+
+  // Next/previous controls
+  function plusSlides(id, n) {
+    showSlides(id, slideIndex[id] += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(id, n) {
+    showSlides(id, slideIndex[id] = n);
+  }
+
+  function showSlides(id, n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides"+id);
+    let dots = document.getElementsByClassName("dot"+id);
+    if (n > slides.length) {slideIndex[id] = 1}
+    if (n < 1) {slideIndex[id] = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex[id]-1].style.display = "block";
+    dots[slideIndex[id]-1].className += " active";
+  }
 </script>
 
 
