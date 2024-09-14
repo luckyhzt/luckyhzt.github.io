@@ -63,7 +63,8 @@
 </center></sub></p>
 
 <h4><center> 
-  <a href="javascript:to_supplementary();"><strong>Supplementary</strong></a> </center></h4>
+  <a href="javascript:to_supplementary();"><strong>Supplementary</strong></a> 
+</center></h4>
 
 <div>
 <a style="cursor:pointer;" data-fancybox data-src="/lvcd/videos/teaser_1.webm"> <video width="837" height="160" autoplay muted loop controls> <source src="/lvcd/videos/teaser_1.webm" type="video/webm"> </video> </a>
@@ -73,6 +74,13 @@
 
 <h3>Abstract</h3>
 <p>We propose the first video diffusion framework for reference-based lineart video colorization. Unlike previous works that rely solely on image generative models to colorize lineart frame by frame, our approach leverages a large-scale pretrained video diffusion model to generate colorized animation videos. This approach leads to more temporally consistent results and is better equipped to handle large motions. Firstly, we introduce <em>Sketch-guided ControlNet</em> which provides additional control to finetune an image-to-video diffusion model for controllable video synthesis, enabling the generation of animation videos conditioned on lineart. We then propose <em>Reference Attention</em> to facilitate the transfer of colors from the reference frame to other frames containing fast and expansive motions. Finally, we present a novel scheme for sequential sampling, incorporating the <em>Overlapped Blending Module</em> and <em>Prev-Reference Attention</em>, to extend the video diffusion model beyond its original fixed-length limitation for long video colorization. Both qualitative and quantitative results demonstrate that our method significantly outperforms state-of-the-art techniques in terms of frame and video quality, as well as temporal consistency. Moreover, our method is capable of generating high-quality, long temporal-consistent animation videos with large motions, which is not achievable in previous works.</p>
+</div>
+
+
+<div class="card">
+  <h3>Abstract</h3>
+  <p> <a style="cursor:pointer;" data-fancybox data-src="/unicolor/figures/teaser.png"> <img src="/unicolor/figures/teaser.png" title="Click to zoom."> </a> </p>
+  <p>We propose the first unified framework <em>UniColor</em> to support colorization in multiple modalities, including both unconditional and conditional ones, such as stroke, exemplar, text, and even a mix of them. Rather than learning a separate model for each type of condition, we introduce a two-stage colorization framework for incorporating various conditions into a single model. In the first stage, multi-modal conditions are converted into a common representation of hint points. Particularly, we propose a novel CLIP-based method to convert the text to hint points. In the second stage, we propose a Transformer-based network composed of <em>Chroma-VQGAN</em> and <em>Hybrid-Transformer</em> to generate diverse and high-quality colorization results conditioned on hint points. Both qualitative and quantitative comparisons demonstrate that our method outperforms state-of-the-art methods in every control modality and further enables multi-modal colorization that was not feasible before. Moreover, we design an interactive interface showing the effectiveness of our unified framework in practical usage, including automatic colorization, hybrid-control colorization, local recolorization, and iterative color editing.</p>
 </div>
 
 
