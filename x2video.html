@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LVCD | luckyhzt</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="LVCD" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/lvcd/" />
+<meta property="og:url" content="http://localhost:4000/lvcd/" />
+<meta property="og:site_name" content="LVCD" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LVCD" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"LVCD","url":"http://localhost:4000/lvcd/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="LVCD" />
+
+<link rel="stylesheet" href="fancybox/fancybox.css" />
+
+<link rel="icon" href="#" />
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">LVCD<nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+        
+        <div class="trigger"><a class="page-link" href="/unicolor">UniColor</a> <a class="page-link" href="/lvcd">LVCD</a> </div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+
+<!--Content starts here-->
+
+<div class="post-content">
+  <center><video class="vid" width="640" height="365" autoplay muted controls> <source src="/lvcd/demo.mp4" type="video/mp4"> </video></center>
+
+  <h1><center><em>LVCD:</em> Reference-based Lineart Video Colorization with Diffusion Models</center></h1>
+  <h3><center>ACM Transactions on Graphics & SIGGRAPH Asia 2024</center></h3>
+
+<center> Zhitong Huang\(^1\),  Mohan Zhang\(^2\),  <a href="https://scholars.cityu.edu.hk/en/persons/jing-liao(45757c38-f737-420d-8a7f-73b58d30c1fd).html">Jing Liao</a>\(^{1*}\) </center>
+
+<p><center><sub>
+\(^1\): City University of Hong Kong, Hong Kong SAR, China   \(^2\): WeChat, Tencent Inc., Shenzhen, China
+</sub>
+<br />
+<sub>
+\(^*\) : Corresponding author
+</center></sub></p>
+
+<h4><center> 
+  <a href="https://arxiv.org/abs/2409.12960"> <strong>ArXiv paper</strong> </a> |
+  <a href="https://github.com/luckyhzt/LVCD"> <strong>Code is available now!</strong> </a> | 
+  <a href="javascript:to_supplementary();"> <strong>Supplementary</strong> </a>(120 demo clips)
+</center></h4>
+
+<div>
+<center>
+<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/lvcd/videos/teaser_1.webm" type="video/webm"> </video>
+<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/lvcd/videos/teaser_2.webm" type="video/webm"> </video>
+<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/lvcd/videos/teaser_3.webm" type="video/webm"> </video>
+<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/lvcd/videos/teaser_4.webm" type="video/webm"> </video>
+</center>
+<p><sub> The first row is from <em>Princess Mononoke</em> directed by Hayao Miyazaki, the second and fourth rows are from <em>Big Fish & Begonia</em> by <a href="http://www.xxbt.com/">Bi An Tian (Beijing) Culture Co., Ltd.</a>, and the third row is from <em>Mr. Miao</em> by <a href="https://space.bilibili.com/9889788/">Gu Dong Animation Studio</a>. </sub></p>
+
+<h3>Abstract</h3>
+<p>We propose the first video diffusion framework for reference-based lineart video colorization. Unlike previous works that rely solely on image generative models to colorize lineart frame by frame, our approach leverages a large-scale pretrained video diffusion model to generate colorized animation videos. This approach leads to more temporally consistent results and is better equipped to handle large motions. Firstly, we introduce <em>Sketch-guided ControlNet</em> which provides additional control to finetune an image-to-video diffusion model for controllable video synthesis, enabling the generation of animation videos conditioned on lineart. We then propose <em>Reference Attention</em> to facilitate the transfer of colors from the reference frame to other frames containing fast and expansive motions. Finally, we present a novel scheme for sequential sampling, incorporating the <em>Overlapped Blending Module</em> and <em>Prev-Reference Attention</em>, to extend the video diffusion model beyond its original fixed-length limitation for long video colorization. Both qualitative and quantitative results demonstrate that our method significantly outperforms state-of-the-art techniques in terms of frame and video quality, as well as temporal consistency. Moreover, our method is capable of generating high-quality, long temporal-consistent animation videos with large motions, which is not achievable in previous works.</p>
+</div>
+
+
+
+<h3>Methodology</h3>
+<p>We aim to design a video diffusion framework for reference-based lineart video colorization, capable of producing temporally consistent long sequences of animations with large motions. First, we propose the sketch-guided
+ControlNet and Reference Attention, which enable the model to generate animations with fast and expansive movements guided by lineart sketches. After modifying the model architecture, we finetune it using animation videos to perform our task. During inference, we extend the original SVD to produce long, temporally consistent animations through sequential sampling, incorporating the Overlapped Blending Module and Prev-Reference Attention.</p>
+<div class="slideshow-container">
+  <div class="mySlides0 fade">
+    <div class="card">
+      <div><strong>Model Architecture</strong></div>
+        <p> <img class="img" src="/lvcd/figures/architecture.svg"> </p>
+      <div style="text-align: center;">Model architecture of sketch-guided ControlNet and Reference Attention. All frames are from <em>Big Fish & Begonia</em>.</div>
+    </div>
+  </div>
+
+  <div class="mySlides0 fade">
+    <div class="card">
+      <div><strong>Sequential Sampling</strong></div>
+        <p> <img class="img" src="/lvcd/figures/sample.svg"> </p>
+      <div style="text-align: center;">Sequential sampling with Overlapped Blending and Prev-Reference Attention.</div>
+    </div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(0, -1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(0, 1)">&#10095;</a>
+</div>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot0" onclick="currentSlide(0, 1)"></span>
+  <span class="dot0" onclick="currentSlide(0, 2)"></span>
+</div>
+
+
+
+<h3>Comparisons</h3>
+<p>Qualitative comparison with five methods: ACOF [Yu et al . 2024], TCVC [Thasarathan et al. 2019], CNet+Refonly [Zhang et al . 2023], EISAI [Chen and Zwicker 2022], and SEINE [Chen et al . 2024].</p>
+<div class="slideshow-container">
+  <div class="mySlides1 fade">
+    <div class="card">
+      <div><strong>Qualitative comparison 1</strong></div>
+        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/lvcd/videos/comp_1.webm" type="video/webm"> </video> </p>
+        <p> Input frames are from <em>Big Fish & Begonia</em>. </p>
+    </div>
+  </div>
+
+  <div class="mySlides1 fade">
+    <div class="card">
+      <div><strong>Qualitative comparison 2</strong></div>
+        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/lvcd/videos/comp_2.webm" type="video/webm"> </video> </p>
+        <p> Input frames are from <em>Mr. Miao</em>. </p>
+    </div>
+  </div>
+
+  <div class="mySlides1 fade">
+    <div class="card">
+      <div><strong>Qualitative comparison 3</strong></div>
+        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/lvcd/videos/comp_3.webm" type="video/webm"> </video> </p>
+        <p> Input frames are from <em>Spirited Away</em>. </p>
+    </div>
+  </div>
+
+  <div class="mySlides1 fade">
+    <div class="card">
+      <div><strong>Qualitative comparison 4</strong></div>
+        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/lvcd/videos/comp_4.webm" type="video/webm"> </video> </p>
+        <p> Input frames are from <em>Luo Xiao Hei</em>. </p>
+    </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(1, -1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+
+<div style="text-align:center">
+  <span class="dot1" onclick="currentSlide(1, 1)"></span>
+  <span class="dot1" onclick="currentSlide(1, 2)"></span>
+  <span class="dot1" onclick="currentSlide(1, 3)"></span>
+  <span class="dot1" onclick="currentSlide(1, 4)"></span>
+</div>
+
+
+<!--Content ends here-->
+
+
+
+</div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+  </div>
+
+</footer>
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Fancybox -->
+<script src="fancybox/fancybox.umd.js"></script>
+<script>
+  Fancybox.bind('[data-fancybox]', {
+    infinite: false,
+    Thumbs: {
+      autoStart: false,
+    },
+  });
+</script>
+
+<!-- Javascript Functions -->
+
+</script>
+
+<script type = "text/javascript">
+  function to_supplementary() {
+    origin = window.location.origin;
+    window.location.href = origin + '/lvcd/supplementary/supplementary.html';
+  }
+
+  let slideIndex = [1, 1, 1];
+  showSlides(0, slideIndex[0]);
+  showSlides(1, slideIndex[1])
+  showSlides(2, slideIndex[2])
+
+  // Next/previous controls
+  function plusSlides(id, n) {
+    showSlides(id, slideIndex[id] += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(id, n) {
+    showSlides(id, slideIndex[id] = n);
+  }
+
+  function showSlides(id, n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides"+id);
+    let dots = document.getElementsByClassName("dot"+id);
+    if (n > slides.length) {slideIndex[id] = 1}
+    if (n < 1) {slideIndex[id] = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex[id]-1].style.display = "block";
+    dots[slideIndex[id]-1].className += " active";
+  }
+</script>
+
+
+</body>
+
+</html>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
