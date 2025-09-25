@@ -70,11 +70,10 @@
 
 <div>
 <center>
-<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/x2video/videos/teaser_1.webm" type="video/webm"> </video>
-<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/x2video/videos/teaser_2.webm" type="video/webm"> </video>
-<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/x2video/videos/teaser_3.webm" type="video/webm"> </video>
+<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/x2video/videos/teaser_1.mp4" type="video/mp4"> </video>
+<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/x2video/videos/teaser_2.mp4" type="video/mp4"> </video>
+<video class="vid" width="880" height="170" autoplay muted loop controls> <source src="/x2video/videos/teaser_3.mp4" type="video/mp4"> </video>
 </center>
-<p><sub> The first row is from <em>Princess Mononoke</em> directed by Hayao Miyazaki, the second and fourth rows are from <em>Big Fish & Begonia</em> by <a href="http://www.xxbt.com/">Bi An Tian (Beijing) Culture Co., Ltd.</a>, and the third row is from <em>Mr. Miao</em> by <a href="https://space.bilibili.com/9889788/">Gu Dong Animation Studio</a>. </sub></p>
 
 <h3>Abstract</h3>
 <p>We present <em>X2Video</em>, the first diffusion model for rendering photorealistic videos guided by intrinsic channels including albedo, normal, roughness, metallicity, and irradiance, while supporting intuitive multi-modal controls with reference images and text prompts for both global and local regions. The intrinsic guidance allows accurate manipulation of color, material, geometry, and lighting, while reference images and text prompts provide intuitive adjustments in the absence of intrinsic information. To enable these functionalities, we extend the intrinsic-guided image generation model XRGB to video generation by employing a novel and efficient <em>Hybrid Self-Attention</em>, which ensures temporal consistency across video frames and also enhances fidelity to reference images. We further develop a <em>Masked Cross-Attention</em> to disentangle global and local text prompts, applying them effectively onto respective
@@ -84,22 +83,20 @@ local and global regions. For generating long videos, our novel <em>Recursive Sa
 
 
 <h3>Methodology</h3>
-<p>We aim to design a video diffusion framework for reference-based lineart video colorization, capable of producing temporally consistent long sequences of animations with large motions. First, we propose the sketch-guided
-ControlNet and Reference Attention, which enable the model to generate animations with fast and expansive movements guided by lineart sketches. After modifying the model architecture, we finetune it using animation videos to perform our task. During inference, we extend the original SVD to produce long, temporally consistent animations through sequential sampling, incorporating the Overlapped Blending Module and Prev-Reference Attention.</p>
 <div class="slideshow-container">
   <div class="mySlides0 fade">
     <div class="card">
       <div><strong>Model Architecture</strong></div>
-        <p> <img class="img" src="/lvcd/figures/architecture.svg"> </p>
-      <div style="text-align: center;">Model architecture of sketch-guided ControlNet and Reference Attention. All frames are from <em>Big Fish & Begonia</em>.</div>
+        <p> <img class="img" src="/x2video/figures/overview.svg"> </p>
+      <div style="text-align: center;">Overall structure of our framework. Given a sequence of intrinsic channels (with optional multi-modal conditions including a reference frame, global text, and local masked text), our model can generate temporally consistent video. Hybrid Self-Attention is proposed to enhance temporal consistency and fidelity to the reference. Masked Cross-Attention is proposed to effectively apply global and local text prompts on corresponding global and local regions.</div>
     </div>
   </div>
 
   <div class="mySlides0 fade">
     <div class="card">
       <div><strong>Sequential Sampling</strong></div>
-        <p> <img class="img" src="/lvcd/figures/sample.svg"> </p>
-      <div style="text-align: center;">Sequential sampling with Overlapped Blending and Prev-Reference Attention.</div>
+        <p> <img class="img" src="/x2video/figures/sample.svg"> </p>
+      <div style="text-align: center;">Recursive Sampling scheme. We sample long videos with a keyframe prediction stage followed by successive stages of frame interpolation.</div>
     </div>
   </div>
 
@@ -117,37 +114,33 @@ ControlNet and Reference Attention, which enable the model to generate animation
 
 
 <h3>Comparisons</h3>
-<p>Qualitative comparison with five methods: ACOF [Yu et al . 2024], TCVC [Thasarathan et al. 2019], CNet+Refonly [Zhang et al . 2023], EISAI [Chen and Zwicker 2022], and SEINE [Chen et al . 2024].</p>
+<p>Qualitative comparisons with XRGB and SVD+CNet, where cyan frames highlight the temporal inconsistencies observed in XRGB. Purple frames indicate wrong colors or materials produced by SVD+CNet due to the lack of intrinsic knowledge. Red frames illustrate our model's ability to infer reflective surfaces with mirrored objects. Zoom-in is recommended for better visualization.</p>
 <div class="slideshow-container">
   <div class="mySlides1 fade">
     <div class="card">
       <div><strong>Qualitative comparison 1</strong></div>
-        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/lvcd/videos/comp_1.webm" type="video/webm"> </video> </p>
-        <p> Input frames are from <em>Big Fish & Begonia</em>. </p>
+        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/x2video/videos/comp_1.mp4" type="video/mp4"> </video> </p>
     </div>
   </div>
 
   <div class="mySlides1 fade">
     <div class="card">
       <div><strong>Qualitative comparison 2</strong></div>
-        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/lvcd/videos/comp_2.webm" type="video/webm"> </video> </p>
-        <p> Input frames are from <em>Mr. Miao</em>. </p>
+        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/x2video/videos/comp_2.mp4" type="video/mp4"> </video> </p>
     </div>
   </div>
 
   <div class="mySlides1 fade">
     <div class="card">
       <div><strong>Qualitative comparison 3</strong></div>
-        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/lvcd/videos/comp_3.webm" type="video/webm"> </video> </p>
-        <p> Input frames are from <em>Spirited Away</em>. </p>
+        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/x2video/videos/comp_3.mp4" type="video/mp4"> </video> </p>
     </div>
   </div>
 
   <div class="mySlides1 fade">
     <div class="card">
       <div><strong>Qualitative comparison 4</strong></div>
-        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/lvcd/videos/comp_4.webm" type="video/webm"> </video> </p>
-        <p> Input frames are from <em>Luo Xiao Hei</em>. </p>
+        <p> <video width="837" height="470" autoplay muted loop controls> <source src="/x2video/videos/comp_4.mp4" type="video/mp4"> </video> </p>
     </div>
   </div>
 
