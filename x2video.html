@@ -54,10 +54,10 @@
 
   <h1><center><em>X2Video:</em> Adapting Diffusion Models for Multimodal Controllable Neural Video Rendering</center></h1>
 
-<center> Zhitong Huang\(^1\),  Mohan Zhang\(^2\),  <a href="https://scholars.cityu.edu.hk/en/persons/jing-liao(45757c38-f737-420d-8a7f-73b58d30c1fd).html">Jing Liao</a>\(^{1*}\) </center>
+<center> Zhitong Huang\(^1\),  Mohan Zhang\(^2\), Renhan Wang\(^3\), Rui Tang\(^3\), Hao Zhu\(^3\),  <a href="https://scholars.cityu.edu.hk/en/persons/jing-liao(45757c38-f737-420d-8a7f-73b58d30c1fd).html">Jing Liao</a>\(^{1*}\) </center>
 
 <p><center><sub>
-\(^1\): City University of Hong Kong, Hong Kong SAR, China   \(^2\): WeChat, Tencent Inc., Shenzhen, China
+\(^1\): City University of Hong Kong, Hong Kong SAR, China.   \(^2\): WeChat, Tencent Inc., Shenzhen, China.   \(^3\): Manycore Tech Inc., Hangzhou, China.
 </sub>
 <br />
 <sub>
@@ -66,7 +66,6 @@
 
 <h4><center> 
   <a href="https://arxiv.org/abs/2409.12960"> <strong>ArXiv paper</strong> </a> |
-  <a href="https://github.com/luckyhzt/X2Video"> <strong>Code is available now!</strong> </a> | 
   <a href="javascript:to_supplementary();"> <strong>Supplementary</strong> </a>(120 demo clips)
 </center></h4>
 
@@ -80,7 +79,8 @@
 <p><sub> The first row is from <em>Princess Mononoke</em> directed by Hayao Miyazaki, the second and fourth rows are from <em>Big Fish & Begonia</em> by <a href="http://www.xxbt.com/">Bi An Tian (Beijing) Culture Co., Ltd.</a>, and the third row is from <em>Mr. Miao</em> by <a href="https://space.bilibili.com/9889788/">Gu Dong Animation Studio</a>. </sub></p>
 
 <h3>Abstract</h3>
-<p>We propose the first video diffusion framework for reference-based lineart video colorization. Unlike previous works that rely solely on image generative models to colorize lineart frame by frame, our approach leverages a large-scale pretrained video diffusion model to generate colorized animation videos. This approach leads to more temporally consistent results and is better equipped to handle large motions. Firstly, we introduce <em>Sketch-guided ControlNet</em> which provides additional control to finetune an image-to-video diffusion model for controllable video synthesis, enabling the generation of animation videos conditioned on lineart. We then propose <em>Reference Attention</em> to facilitate the transfer of colors from the reference frame to other frames containing fast and expansive motions. Finally, we present a novel scheme for sequential sampling, incorporating the <em>Overlapped Blending Module</em> and <em>Prev-Reference Attention</em>, to extend the video diffusion model beyond its original fixed-length limitation for long video colorization. Both qualitative and quantitative results demonstrate that our method significantly outperforms state-of-the-art techniques in terms of frame and video quality, as well as temporal consistency. Moreover, our method is capable of generating high-quality, long temporal-consistent animation videos with large motions, which is not achievable in previous works.</p>
+<p>We present <em>X2Video</em>, the first diffusion model for rendering photorealistic videos guided by intrinsic channels including albedo, normal, roughness, metallicity, and irradiance, while supporting intuitive multi-modal controls with reference images and text prompts for both global and local regions. The intrinsic guidance allows accurate manipulation of color, material, geometry, and lighting, while reference images and text prompts provide intuitive adjustments in the absence of intrinsic information. To enable these functionalities, we extend the intrinsic-guided image generation model XRGB to video generation by employing a novel and efficient <em>Hybrid Self-Attention</em>, which ensures temporal consistency across video frames and also enhances fidelity to reference images. We further develop a <em>Masked Cross-Attention</em> to disentangle global and local text prompts, applying them effectively onto respective
+local and global regions. For generating long videos, our novel <em>Recursive Sampling</em> method incorporates progressive frame sampling, combining keyframe prediction and frame interpolation to maintain long-range temporal consistency while preventing error accumulation. To support the training of X2Video, we assembled a video dataset named <em>InteriorVideo</em>, featuring 1,154 rooms from 295 interior scenes, complete with reliable ground-truth intrinsic channel sequences and smooth camera trajectories.</p>
 </div>
 
 
